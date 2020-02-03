@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple-piskel-clone</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__title">Simple-piskel-clone</div>
+  </header>
+  <section class="main">
+    <div class="main__sticky">
+      <div class="sticky">
+        <div class="pen-size">
+          <div class="pen-size__container" data-size="1"></div>
+          <div class="pen-size__container" data-size="2"></div>
+          <div class="pen-size__container" data-size="3"></div>
+          <div class="pen-size__container" data-size="4"></div>
+        </div>
+        <ul class="tools">
+          <li class="tools__item tools__item--pen" data-tool="pen" data-tooltip="<div class='tooltip-container'><div>Pen tool <span class='tooltip-shortcut'>(P)</span></div></div>"></li>
+          <li class="tools__item tools__item--fill" data-tool="fill" data-tooltip="<div class='tooltip-container'><div>Paint bucket tool <span class='tooltip-shortcut'>(B)</span></div></div>"></li>
+          <li class="tools__item tools__item--eraser" data-tool="eraser" data-tooltip="<div class='tooltip-container'><div>Eraser tool <span class='tooltip-shortcut'>(E)</span></div></div>"></li>
+          <li class="tools__item tools__item--stroke" data-tool="stroke" data-tooltip="<div class='tooltip-container'>
+            <div>Stroke tool <span class='tooltip-shortcut'>(L)</span></div></div>"></li>
+          <li class="tools__item tools__item--color-picker" data-tool="color" data-tooltip="<div class='tooltip-container'><div>Color picker <span class='tooltip-shortcut'>(O)</span></div></div>"></li>
+        </ul>
+        <div class="palette">
+          <div class="palette__item palette__item--current">
+            <input class="color" type="color">
+            <div class="palette__preview"></div>
+          </div>
+          <div class="palette__item palette__item--alternative">
+            <input class="color" type="color">
+            <div class="palette__preview"></div>
+          </div>
+          <div class="palette__item--swap"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="main-wrapper">
+      <div class="column column__frame">
+        <div class="frame">
+          <ul class="frame__list list">
+            <li class="list__item list__item--active">
+              <div class="canvas-container">
+                <div class="canvas-background"></div>
+                <canvas class="canvas" width="96" height="96" data-id="0"></canvas>
+                <div class="canvas-tool canvas-tool__move" data-tooltip="<div class='tooltip-container'><div>Move <span class='tooltip-shortcut'>(M)</span></div></div>"></div>
+                <button class="canvas-tool canvas-tool__copy" data-tooltip="<div class='tooltip-container'><div>Copy <span class='tooltip-shortcut'>(C)</span></div></div>"></button>
+              </div>
+            </li>
+          </ul>
+          <div id="add-frame" class="add-frame">
+            <div class="add-frame__icon"></div>
+            <div class="add-frame__label">Add new frame</div>
+          </div>
+        </div>
+      </div>
+      <div class="column column__canvas">
+        <div class="canvas-container canvas-container__main">
+          <div class="canvas-background"></div>
+          <canvas width="512" height="512" id="canvas"></canvas>
+        </div>
+      </div>
+      <div class="column column__settings">
+        <div class="preview">
+          <div class="preview__canvas">
+            <div class="canvas-container">
+              <div class="canvas-background"></div>
+              <canvas width="200" height="200"></canvas>
+            </div>
+          </div>
+          <div class="preview__tools">
+            <span class="preview__fps">2</span><span>fps</span>
+            <input type="range" value="2" min="0" max="24" class="preview__range">
+          </div>
+        </div>
+        <div class="canvas-size">
+          <button class="canvas-size__item" data-size="32">32x32</button>
+          <button class="canvas-size__item" data-size="64">64x64</button>
+          <button class="canvas-size__item" data-size="128">128x128</button>
+        </div>
+        <div class="full-screen">
+          <button class="full-screen__btn">Full-screen</button>
+          <button class="apng">apng</button>
+          <button class="gif">gif</button>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</body>
+</html>
