@@ -47,7 +47,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "downloadjs": "^1.4.7",
     "gif.js-upgrade": "^0.2.1",
-    "mocha": "^7.0.0",
+    "mocha": "^10.2.0",
     "upng-js": "^2.1.0"
   }
 }
